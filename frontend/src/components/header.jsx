@@ -17,13 +17,13 @@ const Header = () => {
 
             <div  className='actions'>
                 <div>
-                    <Link to='Home'><a href="">My Resumes</a></Link>
+                    <Link to='Home'>My Resumes</Link>
                 </div>
                 <div>
-                    <Link to='/'><a href="">Login</a></Link>
+                    <Link to='/'>Login</Link>
                 </div>
                 <div>
-                    <Link to='Signup'><a href="">Sign-up</a></Link>
+                    <Link to='Signup'>Sign-up</Link>
                 </div>
             </div>
         </nav>

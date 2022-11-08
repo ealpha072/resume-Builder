@@ -5,6 +5,7 @@ import Header from './components/header'
 import Footer from './components/footer'
 import Signup from './pages/signup'
 import Home from './pages/Home'
+import Create from './pages/Create'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
                     <Route path='/' element={<Login />} />
                     <Route path='/signup' element={<Signup />} />
                     <Route path='/home' element={<Home />} />
+                    <Route path='/create' element={<Create />} />
                 </Routes>
             </Router>
         </div>
