@@ -123,3 +123,35 @@ form button{
 footer div{
     margin-right:1rem;
 }
+
+/*home page styles*/
+.home-container{
+    margin-top:50px;
+}
+
+.home-container .home-header h1{
+    font-family: 'Playfair Display', serif;
+    font-size:40px;
+    font-weight:400;
+}
+.create-new-resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #0091ff;
+    border-radius:4px;
+    text-align: center;
+    max-height: 320px;
+    min-height: 320px;
+    cursor: pointer;
+    width:227px;
+}
+
+.create-new-resume .icon-holder{
+    color:#0091ff;
+}
+.create-new-resume .icon-holder i{
+    font-style: normal;
+    font-size:18px;
+    font-weight:700;
+}

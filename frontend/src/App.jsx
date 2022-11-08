@@ -4,6 +4,7 @@ import Login from './pages/login'
 import Header from './components/header'
 import Footer from './components/footer'
 import Signup from './pages/signup'
+import Home from './pages/Home'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={<Login />} />
                     <Route path='/signup' element={<Signup />} />
+                    <Route path='/home' element={<Home />} />
                 </Routes>
             </Router>
         </div>

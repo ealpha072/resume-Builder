@@ -17,7 +17,7 @@ const Header = () => {
 
             <div  className='actions'>
                 <div>
-                    <Link to='/'><a href="">My Resumes</a></Link>
+                    <Link to='Home'><a href="">My Resumes</a></Link>
                 </div>
                 <div>
                     <Link to='/'><a href="">Login</a></Link>
