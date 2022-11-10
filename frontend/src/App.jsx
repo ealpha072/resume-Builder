@@ -6,6 +6,7 @@ import Footer from './components/footer'
 import Signup from './pages/signup'
 import Home from './pages/Home'
 import Create from './pages/Create'
+import Templates from './pages/Templates'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
                     <Route path='/signup' element={<Signup />} />
                     <Route path='/home' element={<Home />} />
                     <Route path='/create' element={<Create />} />
+                    <Route path='/choose-template' element={<Templates />} />
                 </Routes>
             </Router>
         </div>
