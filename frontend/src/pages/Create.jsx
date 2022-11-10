@@ -1,23 +1,45 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Create = () => {
   return (
     <div className='home-container'>
-        <h1>Hello</h1>
         <div className="home-header">
             <h1>How do you want to start?</h1>
         </div>
         <div className="resumes-container">
-            <div className="create-new-resume">
-                <div className="create-resume-header">
-                    <h3>Create a new resume</h3>
+            <Link>
+                <div className="new-resume new-resume-start">
+                    <div className="resume-start-container">
+                        <div className="start-header">
+                           <h1 className='heading'>Create new resume</h1>
+                        </div>
+                        <p className='start-p'>
+                            We'll guide you step by <br />
+                            step
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div className="upload-linkedin">
-                <div className="create-resume-header">
-                    <h3>Upload your linkedIn Profile</h3>
+            </Link>
+            <Link>
+                <div className="new-resume upload-linkedin">
+                    <div className="resume-start-linkedin">
+                        <div className="start-header">
+                            <h1 className='heading'>Upload your linkedin profile</h1>
+                        </div>
+                        <p className='start-p'>
+                            Have a LinkedIn profile<br />
+                            Save time and upload your <br />
+                            information
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </Link>
+        </div>
+        <div className="back-create-resume">
+            <button className="back">
+                Back
+            </button>
         </div>
     </div>
   )
