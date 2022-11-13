@@ -85,7 +85,7 @@ input:focus{
     border-bottom: 2px solid #0091ff;
 }
 
-form button{
+form button, .btn{
     width:100%;
     height:45px;
     background-color: #0091ff;
@@ -259,7 +259,7 @@ footer div{
 
 .template-one{
     height:320px;
-    width: calc(100%/5);
+    width: 250px;
     border: 1px solid #b0bbd1;
     border-radius: 5px;
 }
@@ -298,4 +298,100 @@ footer div{
 .paginate button i{
     font-size: 1rem;
     color: #0091ff;
+}
+
+
+/*resume creation */
+.mainWrapper{
+    display:flex;
+}
+
+.mainWrapper-left{
+    width:40%;
+    height:400px;
+    border:1px solid;
+}
+
+.mainWrapper-right{
+    width: 60%;
+    border:1px solid;
+}
+
+.contact-infomation{
+    padding: 20px;
+}
+.row-1{
+    display:flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.col{
+    width:100%;
+}
+
+.col input{
+    width:95%;
+}
+
+.form-div{
+    position:relative;
+}
+
+.label{
+    position:absolute;
+    top:50%;
+    left:0;
+    pointer-events: none;
+    transition: all 0.15s ease-out 0s;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-weight: 500;
+    color: #000;
+    font-size: 16px;
+}
+
+input:focus+label,
+input.has-value + label{
+    top: 10px;
+    color:#0091ff;
+}
+
+input:focus::-webkit-input-placeholder 
+{
+    color: transparent;
+}
+
+.form-input{
+    padding-top:10px;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.custom-file-upload{
+    background-color: #1c96fe;
+    width: 130px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    min-height: 45px;
+    line-height: 45px;
+    margin-top: 8px;
+}
+
+.label-img{
+    top: 0%;
+}
+
+.btn-social-link{
+    border:none;
+    background-color: none;
+}
+.divider{
+    margin-top:100px;
+    border:1px solid #0091ff;
 }

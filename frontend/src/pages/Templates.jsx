@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Templates = () => {
   return (
@@ -28,8 +29,13 @@ const Templates = () => {
         </div>
       </div>
       <div className="templates-select">
-        <div className="template-one template-margin"></div>
-        <div className="template-one"></div>
+          <Link to='/editor'>
+            <div className="template-one template-margin"></div>
+          </Link>
+          <Link to='/editor'>
+            <div className="template-one template-margin"></div>
+          </Link>
+        
       </div>
       <div className="paginate">
             <div className="left-move">

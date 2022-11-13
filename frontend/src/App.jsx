@@ -7,6 +7,7 @@ import Signup from './pages/signup'
 import Home from './pages/Home'
 import Create from './pages/Create'
 import Templates from './pages/Templates'
+import Editor from './pages/Editor'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
                     <Route path='/home' element={<Home />} />
                     <Route path='/create' element={<Create />} />
                     <Route path='/templates' element={<Templates />} />
+                    <Route path='/editor/' element={<Editor />} />
                 </Routes>
             </Router>
         </div>
