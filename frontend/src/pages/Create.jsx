@@ -8,7 +8,7 @@ const Create = () => {
             <h1>How do you want to start?</h1>
         </div>
         <div className="resumes-container">
-            <Link>
+            <Link to='/templates'>
                 <div className="new-resume new-resume-start">
                     <div className="resume-start-container">
                         <div className="start-header">

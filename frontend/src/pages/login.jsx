@@ -23,7 +23,9 @@ const Login = () => {
                       <input type="password"/>
                   </div>
                   <div className='submit-btn'>
-                      <button type='submit'>Log In</button>
+                      <Link to='/home'>
+                        <button type='submit'>Log In</button>
+                      </Link>
                   </div>
               </form>
           </div>

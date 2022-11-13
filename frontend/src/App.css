@@ -8,6 +8,10 @@ html, body{
     width: 95%;
     margin: auto;
 }
+
+li{
+    list-style:none;
+}
 /*nav bar styles*/
 
 nav, .logo {
@@ -89,6 +93,7 @@ form button{
     color:white;
     font-size:16px;
     border-radius:5px;
+    cursor: pointer;
 }
 
 .login-actions{
@@ -129,7 +134,7 @@ footer div{
     margin-top:50px;
 }
 
-.home-container .home-header h1{
+.home-container .home-header h1, .header-head{
     font-family: 'Playfair Display', serif;
     font-size:40px;
     font-weight:400;
@@ -224,4 +229,73 @@ footer div{
     background-color: #00f4d9;
     border-color: #00f4d9;
     color: #000;
+}
+
+/* Template choosee*/
+.color-p{
+    font-family: 'Muli' sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color:#b0bbd1;
+}
+
+.template-colors ul{
+    padding-left: 0;
+    display:flex;
+}
+
+.template-colors ul li{
+    padding-right: 20px;
+}
+
+.template-color{
+    height: 45px;
+    width: 45px;
+    background-color: #5b509b;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.template-one{
+    height:320px;
+    width: calc(100%/5);
+    border: 1px solid #b0bbd1;
+    border-radius: 5px;
+}
+
+.template-margin{
+    margin-right:20px;
+}
+
+.template-one:hover{
+    border: 2px solid #0091ff;
+    cursor: pointer;
+}
+
+.templates-select{
+    display: flex;
+    margin-top:70px;
+}
+
+.paginate{
+    width:100%;
+    margin-top: 20px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.paginate button{
+    border:2px solid #0091ff;
+    border-radius:4px;
+    height:32px;
+    width:32px;
+    cursor:pointer;
+    background:none;
+    outline:none;
+}
+
+.paginate button i{
+    font-size: 1rem;
+    color: #0091ff;
 }
