@@ -1,6 +1,7 @@
 import React from 'react'
 import Contact from '../components/Contact'
 import Breadcrump from '../components/Breadcrump'
+import Education from '../components/Education'
 
 const Editor = () => {
     return (
@@ -8,11 +9,10 @@ const Editor = () => {
             <div className='mainWrapper'>
                 <div className="mainWrapper-left"></div>
                 <div className="mainWrapper-right">
-                    <Contact />
+                    <Education />
                 </div>
             </div>
             <div className="divider"></div>
-            <Breadcrump />
             <div className="save-cont">
                 <div className="back-create-resume save-changes">
                     <button className="back">

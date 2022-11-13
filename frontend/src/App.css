@@ -315,11 +315,11 @@ footer div{
 
 .mainWrapper-right{
     width: 60%;
-    
+    padding-left: 20px;
     margin-top: -22px;
 }
 
-.contact-infomation{
+.infomation{
     padding-left: 20px;
 }
 
@@ -345,7 +345,6 @@ footer div{
     position:absolute;
     top:50%;
     left:0;
-    pointer-events: none;
     transition: all 0.15s ease-out 0s;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -384,8 +383,12 @@ input[type="file"]{
     min-height: 45px;
     line-height: 45px;
     margin-top: 8px;
+    cursor: pointer;
 }
 
+.custom-file-upload:hover{
+    background-color: #3fa2f8;
+}
 .label-img{
     top: 0%;
 }
@@ -442,3 +445,20 @@ input[type="file"]{
     background-color: #00cbb5;
     color: #333;
 }
+
+textarea{
+    width:95%;
+    height: 250px;
+    border: 2px solid #1c96fe;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+textarea:focus{
+    border: 2px solid #1c96fe;
+    outline: none;
+    resize: none;
+}
+
