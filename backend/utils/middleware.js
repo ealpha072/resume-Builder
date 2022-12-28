@@ -10,6 +10,9 @@ const logRequest = (request, response, next) => {
 
 const errorHandler = (error, request, response, next) => {
     logger.error(error.message)
+    if (error.name === 'MongoServerError' && error.code === 11000){
+        return response.status(400).json({error: 'Email already exists'})
+    }
     next(error)
 }
 

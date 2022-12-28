@@ -11,10 +11,12 @@ userRouter.get('/', (request, response) => {
 })
 
 userRouter.post('/', async (request, response, next)=>{
-    const {email, password} = request.body
+    const {email, password, confirmPassword} = request.body
+
 
     try {
         const existingUser = await User.findOne({ email })
+        console.log(existingUser)
         if ( existingUser ) {
             response.status(400).json({
                 error: 'User with email already exists'

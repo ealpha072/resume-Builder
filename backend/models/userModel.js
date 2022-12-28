@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema({
         required: [true, 'Email address cannot be blank']
     },
     passwordHash: String,
-    confirmPasswordHash: String
 })
 
 
@@ -18,7 +17,6 @@ userSchema.set('toJSON', {
         delete returnedObject.__v
         //delete hashed password
         delete returnedObject.passwordHash
-        delete returnedObject.confirmPasswordHash
     }
 })
 
