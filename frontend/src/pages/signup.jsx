@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import signUp from '../services/user'
+import userServices from '../services/user'
 
-const Signup = ({setUser}) => {
+const Signup = ({setUser, setIsSignedup}) => {
+    const navigate = useNavigate()
+
     const formValues = {
         email:'',
         password: '',
@@ -37,11 +40,15 @@ const Signup = ({setUser}) => {
                 return errorMsg
             }
 
-            const user = await signUp({email, password, confirmPassword})
+            const user = await userServices.signUp({email, password, confirmPassword})
             setUser(user)
+            setIsSignedup(true)
+            navigate('/home')
         } catch (error) {
             setErrorMsg('Error signin up user')
-            console.log(errorMsg)
+            setTimeout(()=> {
+                setErrorMsg(null)
+            }, 5000)
         }
     }
 
@@ -60,6 +67,7 @@ const Signup = ({setUser}) => {
             </div>
             <div className="login-form">
                 <form action="" onSubmit={ signupUser }>
+                    <h6>{errorMsg}</h6>
                     <div className='email'>
                         <label htmlFor="email">Email</label>
                         <input 
@@ -94,10 +102,10 @@ const Signup = ({setUser}) => {
             </div>
             <div className="login-actions">
                 <div className="">
-                    <a href="">Already a member?</a>
+                    <Link to='' > Already a member?</Link>
                 </div>
                 <div>
-                    <Link to='/'><a href="">Login</a></Link>
+                    <Link to='/'>Login</Link>
                 </div>
             </div>
         </div>

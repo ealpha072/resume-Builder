@@ -1,5 +1,6 @@
 import express from 'express'
 import bcrypt from 'bcrypt'
+import jwt from 'jsonwebtoken'
 import User from '../models/userModel.js'
 
 
@@ -10,13 +11,12 @@ userRouter.get('/', (request, response) => {
     response.send({name: 'Alpha emmanuel'})
 })
 
-userRouter.post('/', async (request, response, next)=>{
-    const {email, password, confirmPassword} = request.body
+userRouter.post('/signup', async (request, response, next)=>{
+    const {email, password} = request.body
 
 
     try {
         const existingUser = await User.findOne({ email })
-        console.log(existingUser)
         if ( existingUser ) {
             response.status(400).json({
                 error: 'User with email already exists'
@@ -24,12 +24,47 @@ userRouter.post('/', async (request, response, next)=>{
         }
 
         const saltRounds = 10
-        const strongPass = await bcrypt.hash(password, saltRounds)
+        const passwordHash = await bcrypt.hash(password, saltRounds)
         const newUser = new User({
-            email, strongPass
+            email, passwordHash
         })
+
         const savedUser = await newUser.save()
         response.status(201).json(savedUser)
+    } catch (error) {
+        next(error)
+    }
+})
+
+userRouter.post('/login', async (request, response, next) => {
+    console.log(request.body)
+    const { email, password } = request.body
+
+    try {
+        const foundUser  = await User.findOne({ email })
+        console.log(foundUser)
+        const passwordCheck = foundUser === null
+        ? false :
+        await bcrypt.compare(password, foundUser.passwordHash)
+
+        if(!(foundUser && passwordCheck)){
+            response.status(400).json({
+                error:'Invalid username or password'
+            })
+        }
+
+        const userForToken = {
+            email:foundUser.email,
+            id:foundUser._id
+        }
+
+        const token = jwt.sign(
+            userForToken,
+            process.env.SECRET,
+            {expiresIn: 60*60}
+        )
+
+        response.status(200).json({token, email:foundUser.email, id:foundUser._id})
     } catch (error) {
         next(error)
     }
