@@ -20,7 +20,14 @@ const App = () => {
                 <Router>
                     <Header />
                     <Routes>
-                        <Route path='/' element={<Login setIsLoggedin={setIsLoggedin} />} />
+                        <Route 
+                            path='/' 
+                            element={<Login 
+                                setUser={setUser}
+                                setIsSignedup={setIsSignedup }
+                                setIsLoggedin={setIsLoggedin} />
+                            } 
+                        />
                         <Route 
                             path='/signup' 
                             element={<Signup setUser={setUser} setIsSignedup={setIsSignedup } />} 

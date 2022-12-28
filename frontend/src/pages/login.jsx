@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import userServices from '../services/user'
+import { useNavigate } from 'react-router-dom'
 
-const Login = ({ setUser, setIsSignedup }) => {
+const Login = ({ setUser, setIsLoggedin, setIsSignedup }) => {
+    const navigate = useNavigate()
 
     const [loginErr, setLoginerr] = useState('')
     const initialLogin = {
@@ -29,13 +31,16 @@ const Login = ({ setUser, setIsSignedup }) => {
             const password = loginValues.password
 
             const user = await userServices.login({email, password})
+            console.log(user)
             setUser(user)
             setIsSignedup(true)
+            setIsLoggedin(true)
+            navigate('/home')
         } catch (error){
             setLoginerr('Error logging in check password and try again')
             setTimeout(()=>{
                 setLoginerr(null)
-            }, 5000)
+            }, 10000)
         }
     }
 
