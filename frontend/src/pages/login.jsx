@@ -35,6 +35,13 @@ const Login = ({ setUser, setIsLoggedin, setIsSignedup }) => {
             setUser(user)
             setIsSignedup(true)
             setIsLoggedin(true)
+
+            if (user) {
+                window.localStorage.setItem(
+                    'currentUser', JSON.stringify(user)
+                )
+            }
+            
             navigate('/home')
         } catch (error){
             setLoginerr('Error logging in check password and try again')
