@@ -38,6 +38,7 @@ export const userSlice = createSlice({
     },reducers:{
         clearState: (state) => {
             state.isRegistered=false
+            state.isLoggedIn=false
             state.isFetching = false
             state.isError = false
             return state

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
-import { registerUser, clearErrorMsg, clearState, userSelector } from '../redux/userSlice'
+import { registerUser, clearState, userSelector } from '../redux/userSlice'
 
 
 const Signup = () => {
@@ -41,7 +41,7 @@ const Signup = () => {
             setErrorMsg(resp.payload.error)
             setTimeout(()=>{
                 setErrorMsg(null)
-            }, 5000)
+            }, 7000)
            }
         } catch (error) {
             console.log(error)
