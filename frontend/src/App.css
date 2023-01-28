@@ -4,6 +4,12 @@ html, body{
     overflow: auto;
 }
 
+/*error class*/
+.error-class{
+    color: red;
+    font-weight: bold;
+}
+
 .main-holders{
     width: 95%;
     margin: auto;

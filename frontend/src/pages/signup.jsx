@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
-//import { useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-//import userServices from '../services/user'
+import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link, useNavigate } from 'react-router-dom'
+import { registerUser, clearErrorMsg, clearState, userSelector } from '../redux/userSlice'
 
-const Signup = ({setUser, setIsSignedup}) => {
 
+const Signup = () => {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const {isRegistered} = useSelector(userSelector)
     const formValues = {
         email:'',
         password: '',
@@ -13,19 +17,35 @@ const Signup = ({setUser, setIsSignedup}) => {
 
     // app state
     const [signupValues, setSignupValues] = useState(formValues)
+    const [errorMsg, setErrorMsg] = useState(null)
+
+    useEffect(()=>{
+        if(isRegistered === true){
+            dispatch(clearState())
+            navigate('/')
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isRegistered])
 
     //helper functions
     const handleChange = event => {
         const {name, value} = event.target
-        setSignupValues({
-            ...signupValues,
-                [name]:value
-        })
+        setSignupValues({...signupValues, [name]:value})
     }
 
     const signupUser = async (event) => {
         event.preventDefault()
-        console.log(signupValues)
+        try {
+           const resp = await dispatch(registerUser(signupValues))
+           if (resp.payload.error){
+            setErrorMsg(resp.payload.error)
+            setTimeout(()=>{
+                setErrorMsg(null)
+            }, 5000)
+           }
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     return (
@@ -43,7 +63,9 @@ const Signup = ({setUser, setIsSignedup}) => {
             </div>
             <div className="login-form">
                 <form action="" onSubmit={ signupUser }>
-                    <h6>Signup error here</h6>
+                    <div className='error-class'>
+                       {errorMsg}
+                    </div>
                     <div className='email'>
                         <label htmlFor="email">Email</label>
                         <input 

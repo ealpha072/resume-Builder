@@ -1,14 +1,20 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-//import userServices from '../services/user'
+import { useDispatch, useSelector } from 'react-redux'
+import { loginUser, clearState, userSelector } from '../redux/userSlice'
 //import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+    const dispatch = useDispatch()
     const initialLogin = {
         email:'',
         password:''
     }
 
+    useEffect(()=>{
+        dispatch(clearState())
+    })
+    
     const [loginValues, setLoginValues] = useState(initialLogin)
 
     const handleChange = event => {

@@ -16,7 +16,7 @@ userRouter.post('/signup', async (request, response, next)=>{
 
 
     try {
-        const existingUser = await User.findOne({ email })
+        const existingUser = await User.findOne({ email:email })
         if ( existingUser ) {
             response.status(400).json({
                 error: 'User with email already exists'
