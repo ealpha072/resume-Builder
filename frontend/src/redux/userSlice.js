@@ -73,7 +73,6 @@ export const userSlice = createSlice({
             state.isFetching = true
         },
         [loginUser.fulfilled]: (state, {payload}) => {
-            console.log(payload)
             state.isFetching = false
             state.isSuccess = true
             if(payload.error){

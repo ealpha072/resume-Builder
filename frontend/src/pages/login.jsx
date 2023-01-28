@@ -14,9 +14,9 @@ const Login = () => {
         password:''
     }
 
-    useEffect(()=>{
+    /*useEffect(()=>{
         dispatch(clearState())
-    })
+    })*/
 
     useEffect(()=>{
         if(isLoggedIn === true){
@@ -47,7 +47,6 @@ const Login = () => {
                     setLoginErr(null)
                 }, 7000)
             }
-            console.log(loginValues)
         } catch (error) {
             console.log(error)
         }

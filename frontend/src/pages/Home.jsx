@@ -4,16 +4,18 @@ import { useDispatch, useSelector } from 'react-redux'
 import { clearState, userSelector } from '../redux/userSlice'
 
 const Home = () => {
-    const {isLoggedIn} = useSelector(userSelector)
+    const {isLoggedIn, userDetails} = useSelector(userSelector)
     const dispatch = useDispatch() 
     const navigate = useNavigate()
-    
-    useEffect(()=>{
+
+    console.log(userDetails)
+
+    /*useEffect(()=>{
         if(isLoggedIn === false){
             dispatch(clearState())
             navigate('/')
         }
-    })
+    }, [isLoggedIn, dispatch])*/
 
     return (
         <div className='home-container'>
