@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+//import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import userServices from '../services/user'
+//import userServices from '../services/user'
 
 const Signup = ({setUser, setIsSignedup}) => {
-    const navigate = useNavigate()
 
     const formValues = {
         email:'',
@@ -14,7 +13,6 @@ const Signup = ({setUser, setIsSignedup}) => {
 
     // app state
     const [signupValues, setSignupValues] = useState(formValues)
-    const [errorMsg, setErrorMsg] = useState('')
 
     //helper functions
     const handleChange = event => {
@@ -28,28 +26,6 @@ const Signup = ({setUser, setIsSignedup}) => {
     const signupUser = async (event) => {
         event.preventDefault()
         console.log(signupValues)
-
-        try {
-            const email = signupValues.email
-            const password = signupValues.password
-            const confirmPassword = signupValues.confirmPassword
-
-            if(!(password === confirmPassword)){
-                setErrorMsg('Password mismatch')
-                console.log(errorMsg)
-                return errorMsg
-            }
-
-            const user = await userServices.signUp({email, password, confirmPassword})
-            setUser(user)
-            setIsSignedup(true)
-            navigate('/home')
-        } catch (error) {
-            setErrorMsg('Error signin up user')
-            setTimeout(()=> {
-                setErrorMsg(null)
-            }, 5000)
-        }
     }
 
     return (
@@ -67,7 +43,7 @@ const Signup = ({setUser, setIsSignedup}) => {
             </div>
             <div className="login-form">
                 <form action="" onSubmit={ signupUser }>
-                    <h6>{errorMsg}</h6>
+                    <h6>Signup error here</h6>
                     <div className='email'>
                         <label htmlFor="email">Email</label>
                         <input 

@@ -53,18 +53,7 @@ userRouter.post('/login', async (request, response, next) => {
             })
         }
 
-        const userForToken = {
-            email:foundUser.email,
-            id:foundUser._id
-        }
-
-        const token = jwt.sign(
-            userForToken,
-            process.env.SECRET,
-            {expiresIn: 60*60}
-        )
-
-        response.status(200).json({token, email:foundUser.email, id:foundUser._id})
+        response.status(200).json({email:foundUser.email, id:foundUser._id})
     } catch (error) {
         next(error)
     }

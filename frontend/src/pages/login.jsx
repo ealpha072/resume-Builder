@@ -1,12 +1,9 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-import userServices from '../services/user'
-import { useNavigate } from 'react-router-dom'
+//import userServices from '../services/user'
+//import { useNavigate } from 'react-router-dom'
 
-const Login = ({ setUser, setIsLoggedin, setIsSignedup }) => {
-    const navigate = useNavigate()
-
-    const [loginErr, setLoginerr] = useState('')
+const Login = () => {
     const initialLogin = {
         email:'',
         password:''
@@ -25,30 +22,6 @@ const Login = ({ setUser, setIsLoggedin, setIsSignedup }) => {
     const loginUser = async (event) => {
         event.preventDefault()
         console.log(loginValues)
-
-        try{
-            const email = loginValues.email
-            const password = loginValues.password
-
-            const user = await userServices.login({email, password})
-            console.log(user)
-            setUser(user)
-            setIsSignedup(true)
-            setIsLoggedin(true)
-
-            if (user) {
-                window.localStorage.setItem(
-                    'currentUser', JSON.stringify(user)
-                )
-            }
-            
-            navigate('/home')
-        } catch (error){
-            setLoginerr('Error logging in check password and try again')
-            setTimeout(()=>{
-                setLoginerr(null)
-            }, 10000)
-        }
     }
 
     return (
@@ -63,7 +36,7 @@ const Login = ({ setUser, setIsLoggedin, setIsSignedup }) => {
             </div>
             <div className="login-form">
                 <form action="" onSubmit={loginUser} >
-                    <h6>{loginErr}</h6>
+                    <h6>Login error here</h6>
                     <div className='email'>
                         <label htmlFor="email">Email</label>
                         <input 
