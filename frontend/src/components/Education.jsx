@@ -65,7 +65,7 @@ const Education = () => {
 
                 <div className="row-discuss">
                     <div className="col">
-                        <label htmlFor="Description" className='label'>Description</label>
+                       
                         <textarea name="" id="" ></textarea>
                     </div>
                 </div>
