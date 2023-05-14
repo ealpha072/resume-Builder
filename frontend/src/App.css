@@ -64,19 +64,16 @@ form button,
     cursor: pointer;
 }
 
-
-
 /*Footer styles */
 
 /*home page styles*/
 
-
-.home-container .home-header h1, 
 .header-head{
     font-family: 'Playfair Display', serif;
     font-size:40px;
     font-weight:400;
 }
+
 .create-new-resume{
     display: flex;
     justify-content: center;
@@ -104,70 +101,9 @@ form button,
 }
 
 /* How do you want to start*/
-.resumes-container {
-    display:flex;
-}
-
-.new-resume{
-    width: 230px;
-    max-height: 260px;
-    min-height: 260px;
-    border:1px solid #b0bbd1;
-    border-radius: 2px;
-    margin-right:30px;
-    cursor:pointer;
-}
-
-.resume-start-container, .resume-start-linkedin{
-    position: relative;
-}
 
 
-.new-resume-start:hover, .upload-linkedin:hover{
-    border:2px solid #0091ff;
-}
 
-.start-header{
-    margin-top:30px;
-}
-
-.heading{
-    font-family: 'Muli' sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-}
-
-.start-p{
-    font-family: 'Muli' sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color:#b0bbd1;
-    position: absolute;
-    bottom: -200px;
-}
-
-.start-header, .start-p{
-    margin:10px;
-}
-
-.back{
-    font-size: 14px;
-    height:45px;
-    color:#b0bbd1;
-    margin-top:50px;
-    width:230px;
-    border: 1px solid #b0bbd1;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.back:hover{
-    background-color: #00f4d9;
-    border-color: #00f4d9;
-    color: #000;
-}
 
 /* Template choosee*/
 .color-p{

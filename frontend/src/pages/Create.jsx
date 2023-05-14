@@ -6,17 +6,18 @@ import styles from "../styles/Create.module.css"
 const Create = () => {
   return (
     <div className={styles.homecontainer}>
-        <div className="home-header">
+        <div className={styles.homeheader}>
             <h1>How do you want to start?</h1>
         </div>
-        <div className="resumes-container">
+
+        <div className={styles.resumescontainer}>
             <Link to='/templates'>
-                <div className="new-resume new-resume-start">
-                    <div className="resume-start-container">
-                        <div className="start-header">
-                           <h1 className='heading'>Create new resume</h1>
+                <div className={styles.newResume}>
+                    <div className={styles.resumeStartContainer}>
+                        <div className="">
+                           <h1>Create new resume</h1>
                         </div>
-                        <p className='start-p'>
+                        <p>
                             We'll guide you step by <br />
                             step
                         </p>
@@ -24,22 +25,21 @@ const Create = () => {
                 </div>
             </Link>
             <Link>
-                <div className="new-resume upload-linkedin">
-                    <div className="resume-start-linkedin">
-                        <div className="start-header">
-                            <h1 className='heading'>Upload your linkedin profile</h1>
+                <div className={styles.newResume}>
+                    <div className={styles.resumeStartContainer}>
+                        <div className="">
+                            <h1>Upload your linkedin profile</h1>
                         </div>
-                        <p className='start-p'>
-                            Have a LinkedIn profile<br />
-                            Save time and upload your <br />
-                            information
+                        <p>
+                            Have a LinkedIn profile 
+                            upload your information
                         </p>
                     </div>
                 </div>
             </Link>
         </div>
         <div className="back-create-resume">
-            <button className="back">
+            <button className={styles.back}>
                 Back
             </button>
         </div>
