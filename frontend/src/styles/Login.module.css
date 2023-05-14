@@ -1,0 +1,26 @@
+.loginsection{
+    width:fit-content;
+    margin:auto;
+    margin-top: 2rem;
+    margin-bottom: 10px;
+}
+
+.loginsection h3{
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.loginactions{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.loginactions a{
+    color:#6d6e70;
+}
+
+.loginactions a:hover{
+    text-decoration: underline;
+}

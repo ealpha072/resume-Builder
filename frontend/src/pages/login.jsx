@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { loginUser, clearState, userSelector } from '../redux/userSlice'
+
+import styles from "../styles/Login.module.css"
 //import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
@@ -53,7 +55,7 @@ const Login = () => {
     }
 
     return (
-        <div className="login-section">
+        <div className={styles.loginsection}>
             <div className="log">
                 <div className="heading"><h3>Log In</h3></div>
                 <div className="login-desc">
@@ -92,7 +94,7 @@ const Login = () => {
                     </div>
                 </form>
             </div>
-            <div className="login-actions">
+            <div className={styles.loginactions}>
                 <div className="">
                     <Link>
                         Forgot Password?

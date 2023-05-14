@@ -23,24 +23,17 @@ li{
 
 
 /*login form*/
-.login-section{
-    width:fit-content;
-    margin:auto;
-    margin-top: 2rem;
-    margin-bottom: 10px;
-}
 
-.login-section h3{
-    font-size: 23px;
-    font-weight: 700;
-}
 
-.email, .password{
+.email, 
+.password{
     display: flex;
     flex-direction: column;
 }
 
-form .password, form .submit-btn, .login-actions{
+form .password, 
+form .submit-btn
+{
     margin-top:10px;
 }
 
@@ -59,7 +52,8 @@ input:focus{
     border-bottom: 2px solid #0091ff;
 }
 
-form button, .btn{
+form button, 
+.btn{
     width:100%;
     height:45px;
     background-color: #0091ff;
@@ -70,19 +64,7 @@ form button, .btn{
     cursor: pointer;
 }
 
-.login-actions{
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-}
 
-.login-actions a{
-    color:#6d6e70;
-}
-
-.login-actions a:hover{
-    text-decoration: underline;
-}
 
 /*Footer styles */
 .footer {
