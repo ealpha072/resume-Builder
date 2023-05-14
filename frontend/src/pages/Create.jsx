@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import styles from "../styles/Create.module.css"
+
 
 const Create = () => {
   return (
-    <div className='home-container'>
+    <div className={styles.homecontainer}>
         <div className="home-header">
             <h1>How do you want to start?</h1>
         </div>

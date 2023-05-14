@@ -67,30 +67,12 @@ form button,
 
 
 /*Footer styles */
-.footer {
-    display:flex;
-    justify-content: end;
-    font-size: 10px;
-    min-height: 50px;
-    background-color: #0091ff;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width:100%;
-    align-items: center;
-    margin-top: 50px;
-}
-
-footer div{
-    margin-right:1rem;
-}
 
 /*home page styles*/
-.home-container{
-    margin-top:50px;
-}
 
-.home-container .home-header h1, .header-head{
+
+.home-container .home-header h1, 
+.header-head{
     font-family: 'Playfair Display', serif;
     font-size:40px;
     font-weight:400;

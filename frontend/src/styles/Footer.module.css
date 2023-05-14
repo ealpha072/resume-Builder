@@ -1,0 +1,17 @@
+.footer > div:first-child{
+    display:flex;
+    justify-content: end;
+    font-size: 10px;
+    min-height: 50px;
+    background-color: #0091ff;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width:100%;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.footer div{
+    margin-right:1rem;
+}

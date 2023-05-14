@@ -33,9 +33,9 @@ const App = () => {
                     </Routes>
                 </Router>
             </div>
-            <div className="footer">
+            
                 <Footer />
-            </div>
+            
         </div>
     )
 }

@@ -1,11 +1,12 @@
 import React from 'react'
+import styles from "../styles/Footer.module.css"
 
 const Footer = () => {
   return (
     <div>
-        <footer>
+        <footer className={styles.footer}>
             <div>
-                <div className="footer-content">
+                <div className={styles.footer}>
                 &copy; ResumeBuilder.com. All Rights Reserved.
                 </div>
             </div>
