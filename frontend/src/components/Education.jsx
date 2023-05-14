@@ -57,8 +57,15 @@ const Education = () => {
                     </div>
                 </div>
 
+                <div className="row-1">
+                    <div className="col form-div">
+                        <label htmlFor="" className='label'>Description</label>
+                    </div>
+                </div>
+
                 <div className="row-discuss">
-                    <div className="col">                        
+                    <div className="col">
+                        <label htmlFor="Description" className='label'>Description</label>
                         <textarea name="" id="" ></textarea>
                     </div>
                 </div>
