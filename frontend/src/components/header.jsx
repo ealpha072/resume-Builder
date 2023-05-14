@@ -5,10 +5,10 @@ import styles from "../styles/Header.module.css"
 const Header = () => {
   return (
     <div>
-        <nav className='header-container'>
+        <nav className={styles.nav}>
             <div>
-                <div className="logo">
-                    <div className='icons'>
+                <div className={styles.logo}>
+                    <div className={styles.headerIcons}>
                         <i className='fa fa-file-o'></i>
                         <i className="fa fa-cog"></i>
                     </div>
@@ -16,7 +16,7 @@ const Header = () => {
                 </div>
             </div>
 
-            <div  className='actions'>
+            <div  className={styles.actions}>
                 <div>
                     <Link to='create'>My Resumes</Link>
                 </div>
