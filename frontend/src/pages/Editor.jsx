@@ -9,7 +9,7 @@ const Editor = () => {
             <div className='mainWrapper'>
                 <div className="mainWrapper-left"></div>
                 <div className="mainWrapper-right">
-                    <Education />
+                    <Contact />
                 </div>
             </div>
             <div className="divider"></div>
