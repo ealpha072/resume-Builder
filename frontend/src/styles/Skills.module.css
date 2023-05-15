@@ -1,0 +1,12 @@
+.skillsDiv{
+    border: 1px solid #b0bbd1;
+    
+}
+
+.skillsDiv div{
+    width: 90%;
+    margin: 10px auto;
+}
+.skillsDiv div input{
+    width: 90%;
+}

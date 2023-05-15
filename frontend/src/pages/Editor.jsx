@@ -2,6 +2,8 @@ import React from 'react'
 import Contact from '../components/Contact'
 import Breadcrump from '../components/Breadcrump'
 import Education from '../components/Education'
+import Experience from '../components/Experience'
+import Skill from '../components/Skill'
 
 const Editor = () => {
     return (
@@ -9,7 +11,7 @@ const Editor = () => {
             <div className='mainWrapper'>
                 <div className="mainWrapper-left"></div>
                 <div className="mainWrapper-right">
-                    <Contact />
+                    <Skill />
                 </div>
             </div>
             <div className="divider"></div>
