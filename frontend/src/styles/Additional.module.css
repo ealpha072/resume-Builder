@@ -1,0 +1,28 @@
+.additionalDiv{
+    width: 100%;
+}
+
+.additionalDiv div{
+    margin: 10px auto;
+}
+
+.additionalDiv input{
+    margin-right: 10px;
+}
+
+.additionalDiv label{
+    font-family: 'Muli' sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color:#b0bbd1;
+}
+
+.customSection,
+.customSection input{
+    width: 100%;
+}
+
+.customSection input{
+    background-color: #e7eff0;
+}
