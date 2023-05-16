@@ -1,0 +1,13 @@
+.sectionsMenu{
+    display: flex;
+    margin-top: 24px;
+}
+
+.sectionsMenu div{
+    margin-right: 22px;
+    cursor: pointer;
+}
+
+.sectionsMenu div:hover{
+    color: #0091ff;
+}

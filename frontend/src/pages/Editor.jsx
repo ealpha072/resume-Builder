@@ -6,6 +6,7 @@ import Experience from '../components/Experience'
 import Skill from '../components/Skill'
 import Profile from '../components/Profile'
 import Additional from '../components/Additional'
+import styles from "../styles/Editor.module.css"
 
 const Editor = () => {
     return (
@@ -17,6 +18,14 @@ const Editor = () => {
                 </div>
             </div>
             <div className="divider"></div>
+            <div className={styles.sectionsMenu}>
+                <div className="color-p">Contact Information</div>
+                <div className="color-p">Education</div>
+                <div className="color-p">Work Experience</div>
+                <div className="color-p">Key Skills</div>
+                <div className="color-p">Profile</div>
+                <div className="color-p">Complete</div>
+            </div>
 
             <div className="save-cont">
                 <div className="back-create-resume save-changes">
