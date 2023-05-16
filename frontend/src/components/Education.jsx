@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Education = () => {
   return (
@@ -6,7 +5,7 @@ const Education = () => {
         <div className="home-header">
             <h1 className="header-head">Education Information</h1>
             <p className='color-p'>Add your most relevant education, including programs 
-                you’re currently enrolled in.
+                you&'re currently enrolled in.
             </p>
         </div>
 
