@@ -31,12 +31,42 @@ const Editor = () => {
             </div>
             <div className="divider"></div>
             <div className={styles.sectionsMenu}>
-                <div className="color-p" onClick={()=>renderActiveTab(1)}>Contact Information</div>
-                <div className="color-p" onClick={()=>renderActiveTab(2)}>Education</div>
-                <div className="color-p" onClick={()=>renderActiveTab(3)}>Work Experience</div>
-                <div className="color-p" onClick={()=>renderActiveTab(4)}>Key Skills</div>
-                <div className="color-p" onClick={()=>renderActiveTab(5)}>Profile</div>
-                <div className="color-p" onClick={()=>renderActiveTab(6)}>Complete</div>
+                <div 
+                    className={activeTab === 1 ? "activeTab" : "color-p"}
+                    onClick={()=>renderActiveTab(1)}
+                >
+                    Contact Information
+                </div>
+                <div 
+                    className={activeTab === 2 ? "activeTab" : "color-p"}
+                    onClick={()=>renderActiveTab(2)}
+                >
+                    Education
+                </div>
+                <div 
+                    className={activeTab === 3 ? "activeTab" : "color-p"}
+                    onClick={()=>renderActiveTab(3)}
+                >
+                    Work Experience
+                </div>
+                <div 
+                    className={activeTab === 4 ? "activeTab" : "color-p"}
+                    onClick={()=>renderActiveTab(4)}
+                >
+                    Key Skills
+                </div>
+                <div 
+                    className={activeTab === 5 ? "activeTab" : "color-p"}
+                    onClick={()=>renderActiveTab(5)}
+                >
+                    Profile
+                </div>
+                <div 
+                    className={activeTab === 6 ? "activeTab" : "color-p"}
+                    onClick={()=>renderActiveTab(6)}
+                >
+                    Complete
+                </div>
             </div>
 
             <div className="save-cont">

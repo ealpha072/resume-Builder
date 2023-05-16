@@ -11,3 +11,11 @@
 .sectionsMenu div:hover{
     color: #0091ff;
 }
+
+.activeTab{
+    font-family: 'Muli' sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0091ff;
+}

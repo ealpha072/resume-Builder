@@ -119,12 +119,17 @@ form button,
 }
 
 /* Template choosee*/
-.color-p{
+.color-p,
+.activeTab{
     font-family: 'Muli' sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color:#b0bbd1;
+}
+
+.activeTab{
+    color: #0091ff;
 }
 
 .template-colors ul{
