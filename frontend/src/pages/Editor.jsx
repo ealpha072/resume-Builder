@@ -4,6 +4,7 @@ import Breadcrump from '../components/Breadcrump'
 import Education from '../components/Education'
 import Experience from '../components/Experience'
 import Skill from '../components/Skill'
+import Profile from '../components/Profile'
 
 const Editor = () => {
     return (
@@ -11,10 +12,11 @@ const Editor = () => {
             <div className='mainWrapper'>
                 <div className="mainWrapper-left"></div>
                 <div className="mainWrapper-right">
-                    <Skill />
+                    <Profile />
                 </div>
             </div>
             <div className="divider"></div>
+
             <div className="save-cont">
                 <div className="back-create-resume save-changes">
                     <button className="back">

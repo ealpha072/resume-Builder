@@ -50,10 +50,6 @@ const Experience = () => {
                         <div className="col form-div">
                             
                         </div>
-                        <div className="col form-div">
-                            <p htmlFor="">Currentlly work here</p>
-                            <input type="checkbox" className='form-input'/>
-                        </div>
                     </div>
 
                 </form>
