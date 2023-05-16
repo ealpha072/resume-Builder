@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Contact from '../components/Contact'
-import Breadcrump from '../components/Breadcrump'
+//import Breadcrump from '../components/Breadcrump'
 import Education from '../components/Education'
 import Experience from '../components/Experience'
 import Skill from '../components/Skill'
