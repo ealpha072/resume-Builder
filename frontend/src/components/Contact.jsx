@@ -1,4 +1,4 @@
-import React from 'react'
+import styles from "../styles/Contact.module.css" 
 
 const Contact = () => {
   return (
@@ -67,7 +67,20 @@ const Contact = () => {
                 </div>
                 <div className="row-1 social-link-wrapper">
                     <div className="col social-link">
-                        <button className="btn-social-link">- Add Social or Portfolio Links</button>
+                        <button className="btn-social-link">+ Add Social or Portfolio Links</button>
+                    </div>
+                </div>
+                <div className="row-1">
+                    <div className="col form-div">
+                        <input type="text" className='form-input'/>
+                        <label htmlFor="" className='label'>Label</label>
+                    </div>
+                    <div className="col form-div">
+                        <input type="email" className='form-input'/>
+                        <label htmlFor="" className='label'>Link</label>
+                    </div>
+                    <div className={styles.delete}>
+                        <i className='fa fa-trash'></i>
                     </div>
                 </div>
             </form>
