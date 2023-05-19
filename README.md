@@ -1,2 +1,3 @@
 # Resume-Builder
-A responsive resume builder
+
+A responsive resume builder built with MERN Stack
