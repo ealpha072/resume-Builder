@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'
 const baseUrl = 'http://localhost:5000/users'
 
+//register user
 export const registerUser = createAsyncThunk (
     '/register', 
     async (data, {rejectWithValue}) => {
@@ -14,6 +15,7 @@ export const registerUser = createAsyncThunk (
         }
 })
 
+//login user
 export const loginUser = createAsyncThunk (
     '/login', 
     async (data, {rejectWithValue}) => {
@@ -25,6 +27,8 @@ export const loginUser = createAsyncThunk (
         }
 })
 
+
+//user slice
 export const userSlice = createSlice({
     name:'user',
     initialState:{
