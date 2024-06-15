@@ -14,7 +14,6 @@ userRouter.get('/', (request, response) => {
 userRouter.post('/signup', async (request, response, next)=>{
     const {email, password} = request.body
 
-
     try {
         const existingUser = await User.findOne({ email:email })
         if ( existingUser ) {
