@@ -16,7 +16,7 @@ const Header = () => {
     ])
 
     useEffect(()=>{
-        if(location.pathname === "/home"){
+        if(location.pathname.includes("/home")){
             setActions([
                 {
                     name: "My Resumes",
@@ -40,7 +40,7 @@ const Header = () => {
             ])
         }
     }, [location])
-    
+
     return (
         <div>
             <nav className={styles.nav}>
