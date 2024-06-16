@@ -10,13 +10,6 @@ const Home = () => {
 
     console.log(userDetails)
 
-    /*useEffect(()=>{
-        if(isLoggedIn === false){
-            dispatch(clearState())
-            navigate('/')
-        }
-    }, [isLoggedIn, dispatch])*/
-
     return (
         <div className='home-container'>
             <div className="home-header">

@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from "../styles/Create.module.css"
 
-
 const Create = () => {
   return (
     <div className={styles.homecontainer}>

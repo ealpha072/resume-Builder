@@ -31,7 +31,7 @@ const Signup = () => {
 
             return () => clearTimeout(timer)
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
     }, [isRegistered, dispatch, navigate])
 
     //helper functions
