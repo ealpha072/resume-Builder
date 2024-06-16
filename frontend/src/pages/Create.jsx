@@ -10,16 +10,12 @@ const Create = () => {
         </div>
 
         <div className={styles.resumescontainer}>
-            <Link to='/templates'>
+            <Link to='/home/templates'>
                 <div className={styles.newResume}>
                     <div className={styles.resumeStartContainer}>
                         <div className="">
                            <h1>Create new resume</h1>
                         </div>
-                        <p>
-                            We'll guide you step by <br />
-                            step
-                        </p>
                     </div>
                 </div>
             </Link>
@@ -29,10 +25,6 @@ const Create = () => {
                         <div className="">
                             <h1>Upload your linkedin profile</h1>
                         </div>
-                        <p>
-                            Have a LinkedIn profile 
-                            upload your information
-                        </p>
                     </div>
                 </div>
             </Link>
