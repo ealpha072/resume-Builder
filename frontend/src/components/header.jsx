@@ -1,35 +1,71 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import styles from "../styles/Header.module.css"
 
 const Header = () => {
-  return (
-    <div>
-        <nav className={styles.nav}>
-            <div>
-                <div className={styles.logo}>
-                    <div className={styles.headerIcons}>
-                        <i className='fa fa-file-o'></i>
-                        <i className="fa fa-cog"></i>
-                    </div>
-                    <h1>Resume <br />Builder</h1>
-                </div>
-            </div>
+    const location  = useLocation()
+    const [actions, setActions] = useState([
+        {
+            name: "Login",
+            href: "/"
+        },
+        {
+            name: "Signup",
+            href: "/signup"
+        }
+    ])
 
-            <div  className={styles.actions}>
+    useEffect(()=>{
+        if(location.pathname === "/home"){
+            setActions([
+                {
+                    name: "My Resumes",
+                    href: "/home/create"
+                },
+                {
+                    name: "Logout",
+                    href: "/"
+                }
+            ])
+        }else{
+            setActions([
+                {
+                    name: "Signup",
+                    href: "/signup"
+                },
+                {
+                    name: "Login",
+                    href: "/"
+                }
+            ])
+        }
+    }, [location])
+    
+    return (
+        <div>
+            <nav className={styles.nav}>
                 <div>
-                    <Link to='create'>My Resumes</Link>
+                    <div className={styles.logo}>
+                        <div className={styles.headerIcons}>
+                            <i className='fa fa-file-o'></i>
+                            <i className="fa fa-cog"></i>
+                        </div>
+                        <h1>Resume <br />Builder</h1>
+                    </div>
                 </div>
-                <div>
-                    <Link to='/'>Login</Link>
+
+                <div  className={styles.actions}>
+                    {actions.map((action, index) => {
+                        return(
+                            <div key={index}>
+                                <Link to={action.href}>{action.name}</Link>
+                            </div>
+                        )
+                    })}
                 </div>
-                <div>
-                    <Link to='Signup'>Sign-up</Link>
-                </div>
-            </div>
-        </nav>
-        <hr />
-    </div>
+            </nav>
+            <hr />
+        </div>
   )
 }
 
