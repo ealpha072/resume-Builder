@@ -13,16 +13,20 @@ if [[ -n $(git status -s) ]]; then
         echo "Adding all changes"
         git add *
     elif [ $stage_option -eq 2 ]; then
-        echo "Adding current changes"
+        echo "Adding current changes..."
         git add .
     else
-        echo "Adding all changes"
+        echo "Adding all changes..."
         git add *
     fi
 
+    #commit tag
+    echo "Commit types: feat, fix, docs, style, refactor, test,chore"
+    read -p "Commit type: " commit_type
+
     #commit message and header
     read -p "Commit message: " commit_msg
-    git commit -m "$commit_msg"
+    git commit -m "$commit_type: $commit_msg"
 
     read -p "Push changes? [y/n]: " push_ch
 

@@ -29,7 +29,10 @@ userRouter.post('/signup', async (request, response, next)=>{
         })
 
         const savedUser = await newUser.save()
-        response.status(201).json(savedUser)
+        response.status(201).json({
+            user:savedUser,
+            message:"Successfully added user, taking you to login page"
+        })
     } catch (error) {
         next(error)
     }

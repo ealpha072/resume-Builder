@@ -18,14 +18,21 @@ const Signup = () => {
     // app state
     const [signupValues, setSignupValues] = useState(formValues)
     const [errorMsg, setErrorMsg] = useState(null)
+    const [successMsg, setSuccessMsg] = useState(null)
 
     useEffect(()=>{
         if(isRegistered === true){
-            dispatch(clearState())
-            navigate('/')
+            setSuccessMsg("Takikng you to login page")
+            const timer = setTimeout(()=>{
+                setSuccessMsg(null)
+                dispatch(clearState())
+                navigate('/')
+            }, 4000)
+
+            return () => clearTimeout(timer)
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isRegistered])
+    }, [isRegistered, dispatch, navigate])
 
     //helper functions
     const handleChange = event => {
@@ -92,6 +99,9 @@ const Signup = () => {
                             value={signupValues.confirmPassword}
                             onChange={handleChange}
                         />
+                    </div>
+                    <div className='success-class'>
+                       {successMsg}
                     </div>
                     <div className='submit-btn'>
                         <button type='submit'>Sign Up</button>

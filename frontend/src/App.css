@@ -10,6 +10,13 @@ html, body{
     font-weight: bold;
 }
 
+.success-class{
+    color: #270;
+    font-size: smaller;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
 .main-holders{
     width: 95%;
     margin: auto;
